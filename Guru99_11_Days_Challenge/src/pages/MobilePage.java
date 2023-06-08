@@ -26,12 +26,28 @@ public class MobilePage {
 		try {
 			wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(FindProperties.locateProperty("sort_by_xpath")))));
 			Select select= new Select(driver.findElement(By.xpath(FindProperties.locateProperty("sort_by_xpath"))));
-			select.selectByVisibleText("Name");
+			select.selectByVisibleText("Position");
 		}
 		catch(Exception e) {
 			
 			e.printStackTrace();
 			Assert.fail("Sort by name was not found!");
+		}
+	}
+	
+	public void clickSonyXperia() {
+		
+		try {
+			
+			wait.until(ExpectedConditions.visibilityOf(
+					driver.findElement(By.xpath(FindProperties.locateProperty("sony_xperia_xpath"))))).click();
+			
+		}
+		catch(Exception e) {
+			
+			e.printStackTrace();
+			Assert.fail("Button/link not found!");
+			
 		}
 	}
 	

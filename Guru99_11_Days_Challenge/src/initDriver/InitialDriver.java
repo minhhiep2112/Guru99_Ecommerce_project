@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.IndexPage;
 import pages.MobilePage;
+import pages.SonyXperiaPage;
 import ultis.FindProperties;
 
 public class InitialDriver {
@@ -17,6 +18,8 @@ public class InitialDriver {
 	protected WebDriver driver;
 	protected IndexPage indexPage;
 	protected MobilePage mobilePage;
+	protected SonyXperiaPage sonyXperiaPage;
+	
 	
 	@BeforeMethod
 	public void StartBrowser() throws IOException {
@@ -32,6 +35,7 @@ public class InitialDriver {
 		
 		indexPage = new IndexPage(driver);
 		mobilePage = new MobilePage(driver);
+		sonyXperiaPage = new SonyXperiaPage(driver);
 		
 	}
 	
