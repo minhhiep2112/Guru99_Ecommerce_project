@@ -35,7 +35,7 @@ public class TC001_Sort_By extends InitialDriver{
 		
 		System.out.println(areSorted);
 		
-		names.stream().filter(x->x.startsWith("S")).forEach(System.out::println);
+		
 				
 //		List<String> revareSorted = names.stream().sorted(Comparator.reverseOrder()).toList(); 
 	//	System.out.println(revareSorted);  
