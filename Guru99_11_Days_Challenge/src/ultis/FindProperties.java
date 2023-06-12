@@ -15,5 +15,12 @@ public class FindProperties {
 		
 	}
 	
-	
+	public static String dangKy(String key) throws IOException {
+			
+			FileInputStream f = new FileInputStream("./Properties/dangky.properties");
+			Properties p = new Properties();
+			p.load(f);
+			return p.getProperty(key).toString();
+			
+		}
 }

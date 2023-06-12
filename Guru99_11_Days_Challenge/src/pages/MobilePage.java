@@ -26,7 +26,7 @@ public class MobilePage {
 		try {
 			wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(FindProperties.locateProperty("sort_by_xpath")))));
 			Select select= new Select(driver.findElement(By.xpath(FindProperties.locateProperty("sort_by_xpath"))));
-			select.selectByVisibleText("Position");
+			select.selectByVisibleText("Name");
 		}
 		catch(Exception e) {
 			
@@ -47,7 +47,52 @@ public class MobilePage {
 			
 			e.printStackTrace();
 			Assert.fail("Button/link not found!");
-			
+		}
+	}
+	
+	public void clickAddToCartButtonXperia() {
+		try {
+			wait.until(ExpectedConditions.visibilityOf(
+					driver.findElement(By.xpath(FindProperties.locateProperty("add_to_cart_button_xperia_xpath"))))).click();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			Assert.fail("Add to cart button not found!");
+		}
+	}
+	
+	public void clickAddToCompare_Xperia() {
+		try {
+			wait.until(ExpectedConditions.visibilityOf(
+					driver.findElement(By.xpath(FindProperties.locateProperty("add_to_compare_Xperia_xpath"))))).click();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			Assert.fail("Button Add to Compare Sony Xperia not found!");
+		}
+		
+	}
+	
+	public void clickAddToCompare_Iphone() {
+		try {
+			wait.until(ExpectedConditions.visibilityOf(
+					driver.findElement(By.xpath(FindProperties.locateProperty("add_to_compare_IPhone_xpath"))))).click();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			Assert.fail("Button Add to Compare Iphone not found!");
+		}
+		
+	}
+	
+	public void clickCompareButton() {
+		try {
+			wait.until(ExpectedConditions.visibilityOf(
+					driver.findElement(By.xpath(FindProperties.locateProperty("compare_button_xpath"))))).click();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			Assert.fail("Compare button not found!");
 		}
 	}
 	

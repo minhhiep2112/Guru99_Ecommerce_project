@@ -34,6 +34,33 @@ public class IndexPage {
 		
 	}
 	
+	public void clickAccountButton() {
+		try {
+			
+			wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(
+					FindProperties.locateProperty("account_button_xpath"))))).click();
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			Assert.fail("Account button was not found!");
+		}
+		
+	}
+	
+	public void clickMyAccount() {
+		try {
+			
+			wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(
+					FindProperties.locateProperty("my_account_xpath"))))).click();
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			Assert.fail("My account button was not found!");
+		}
+		
+	}
 	
 	
 }
