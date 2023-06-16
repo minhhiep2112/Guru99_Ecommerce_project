@@ -217,6 +217,9 @@ public class CheckoutPage {
 		}
 	}
 	
+	
+	
+	
 	public void clickCheckMoneyOrderRadioButton() {
 		try {
 			driver.findElement(By.xpath("//input[@id='p_method_checkmo']")).click();

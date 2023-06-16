@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import pages.CheckoutCartLG;
 import pages.CheckoutPage;
 import pages.IndexPage;
 import pages.LoginRegistryPage;
@@ -26,6 +28,8 @@ public class InitialDriver {
 	protected TVPage tvPage;
 	protected LoginRegistryPage loginRegistryPage;
 	protected String email;
+	protected CheckoutCartLG checkoutCartLG;
+	
 	
 	@BeforeMethod
 	public void StartBrowser() throws IOException {
@@ -48,7 +52,7 @@ public class InitialDriver {
 		myAccountPage = new MyAccountPage(driver);
 		tvPage = new TVPage(driver);
 		loginRegistryPage = new LoginRegistryPage(driver);
-		
+		checkoutCartLG = new CheckoutCartLG(driver);
 		
 		
 	}

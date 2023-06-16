@@ -102,5 +102,57 @@ public class MyAccountPage {
 		}
 	}	
 	
+	public void clickMyOrdersLink() {
+		
+		try {
+			WebElement myOrders = driver.findElement(By.xpath("//a[text()='My Orders']"));
+			wait.until(ExpectedConditions.visibilityOf(myOrders)).click();
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			Assert.fail("My orders link can not be clicked!");
+		}
+	}	
+	
+	public void clickViewOrderLink() {
+		
+		try {
+			WebElement viewOrder = driver.findElement(By.xpath("//a[text()='View Order']"));
+			wait.until(ExpectedConditions.visibilityOf(viewOrder)).click();
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			Assert.fail("View order link can not be clicked!");
+		}
+	}
+	
+	public void clickPrintOrderLink() {
+		
+		try {
+			WebElement order = driver.findElement(By.xpath("//a[text()='Print Order']"));
+			wait.until(ExpectedConditions.visibilityOf(order)).click();
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			Assert.fail("Print order link can not be clicked!");
+		}
+	}
+	
+	public void clickReOrderLink() {
+		
+		try {
+			WebElement order = driver.findElement(By.xpath("//td[text()='100019476']/following-sibling::td[5]/span/a[2]"));
+			wait.until(ExpectedConditions.visibilityOf(order)).click();
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			Assert.fail("Re-order link can not be clicked!");
+		}
+	}
+	
 	
 }

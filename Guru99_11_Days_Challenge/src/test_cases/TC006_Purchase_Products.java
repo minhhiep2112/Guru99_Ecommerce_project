@@ -1,6 +1,9 @@
 package test_cases;
 
 import static org.testng.Assert.assertEquals;
+
+import java.awt.Robot;
+
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.ITestContext;
@@ -14,8 +17,6 @@ public class TC006_Purchase_Products extends InitialDriver {
 	
 	@Test()
 	public void purchaseProducts(ITestContext e) {
-		
-		
 		
 		// Login
 		indexPage.clickAccountButton();
@@ -64,7 +65,8 @@ public class TC006_Purchase_Products extends InitialDriver {
 			ex.printStackTrace();
 			Assert.fail("Shipping cost is not right!");
 		}
-	
+		
+		// continue to completing order
 		checkoutPage.clickContinueButton2();
 		checkoutPage.clickCheckMoneyOrderRadioButton();
 		checkoutPage.clickContinueButton3();
@@ -83,8 +85,6 @@ public class TC006_Purchase_Products extends InitialDriver {
 		// order number may change each time run test case
 		System.out.println("Order number is: " + driver.findElement(By.xpath("//div[@class='page-title']/following-sibling::p[1]/a")).getText());
 		e.setAttribute("order number", driver.findElement(By.xpath("//div[@class='page-title']/following-sibling::p[1]/a")).getText());
-		
-		
 		
 		
 		
