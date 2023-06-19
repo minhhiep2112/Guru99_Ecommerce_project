@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test_cases.TC008_Re_Order">
+      <class name="test_cases.TC009_Discount_Coupon">
         <methods>
+          <include name="discount"/>
           <include name="CloseBrowser"/>
-          <include name="reorder"/>
           <include name="StartBrowser"/>
         </methods>
-      </class> <!-- test_cases.TC008_Re_Order -->
+      </class> <!-- test_cases.TC009_Discount_Coupon -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

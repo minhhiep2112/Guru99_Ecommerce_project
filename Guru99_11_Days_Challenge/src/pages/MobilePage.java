@@ -96,4 +96,18 @@ public class MobilePage {
 		}
 	}
 	
+	// add to cart IPhone
+	public void clickAddToCartIphone() {
+		try {
+				
+				driver.findElement(By.xpath("//a[text()='IPhone']/parent::h2/following-sibling::div[@class='actions']/button")).click();
+				
+			}
+		catch(Exception e) {
+				e.printStackTrace();
+				Assert.fail("Add to cart cound not be clicked!");
+			}
+			
+		}
+	
 }

@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import pages.CheckoutCartIPhone;
 import pages.CheckoutCartLG;
 import pages.CheckoutPage;
 import pages.IndexPage;
@@ -29,6 +30,7 @@ public class InitialDriver {
 	protected LoginRegistryPage loginRegistryPage;
 	protected String email;
 	protected CheckoutCartLG checkoutCartLG;
+	protected CheckoutCartIPhone checkoutCartIPhone;
 	
 	
 	@BeforeMethod
@@ -53,7 +55,7 @@ public class InitialDriver {
 		tvPage = new TVPage(driver);
 		loginRegistryPage = new LoginRegistryPage(driver);
 		checkoutCartLG = new CheckoutCartLG(driver);
-		
+		checkoutCartIPhone = new CheckoutCartIPhone(driver);
 		
 	}
 	

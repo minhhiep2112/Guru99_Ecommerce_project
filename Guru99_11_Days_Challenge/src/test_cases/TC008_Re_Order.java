@@ -42,6 +42,8 @@ public class TC008_Re_Order extends InitialDriver{
 		checkoutPage.clickContinueButton3();
 		checkoutPage.clickPlaceOrderButton();
 		
+		
+		
 		try {
 			assertTrue(driver.findElement(By.xpath("//h1[text()='Your order has been received.']")).isDisplayed());
 		}
