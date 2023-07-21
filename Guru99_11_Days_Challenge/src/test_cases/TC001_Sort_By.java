@@ -1,3 +1,15 @@
+/*  
+
+Test Steps
+Step 1. Goto http://live.techpanda.org/
+Step 2. Verify Title of the page
+Step 3. Click on ‘MOBILE’ menu
+Step 4. Verify Title of the page
+Step 5. In the list of all mobile , select ‘SORT BY’ dropdown as ‘name’
+Step 6. Verify all products are sorted by name
+*/
+
+
 package test_cases;
 
 import static org.testng.Assert.assertEquals;
@@ -16,8 +28,8 @@ public class TC001_Sort_By extends InitialDriver{
 		
 		
 		System.out.println(driver.findElement(By.xpath("//div[@class='page-title']/h2")).getText());
-		
 		assertTrue(driver.findElement(By.xpath("//div[@class='page-title']/h2")).getText().contains("THIS IS DEMO SITE"),"Wrong message!");
+		
 		indexPage.clickMobileButton();
 		
 		assertTrue(driver.getTitle().equals("Mobile"),"Wrong title!");

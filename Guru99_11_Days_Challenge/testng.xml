@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+		
+	  <class name="test_cases.TC001_Sort_By"/>	
+      <class name="test_cases.TC002_Compare_price"/>
+      <class name="test_cases.TC003_Check_quantity"/>
+      <class name="test_cases.TC004_Multi_Windows"/>
+      <class name="test_cases.TC005_Account_Creation"/>
+      <class name="test_cases.TC006_Purchase_Products"/>
+      <class name="test_cases.TC007_PDF"/>
+      <class name="test_cases.TC008_Re_Order"/>
+      <class name="test_cases.TC009_Discount_Coupon"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

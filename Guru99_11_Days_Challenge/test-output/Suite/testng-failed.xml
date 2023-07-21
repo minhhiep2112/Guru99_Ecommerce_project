@@ -3,13 +3,27 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="test_cases.TC006_Purchase_Products">
+      <class name="test_cases.TC009_Discount_Coupon">
         <methods>
-          <include name="purchaseProducts"/>
+          <include name="discount"/>
           <include name="CloseBrowser"/>
           <include name="StartBrowser"/>
         </methods>
-      </class> <!-- test_cases.TC006_Purchase_Products -->
+      </class> <!-- test_cases.TC009_Discount_Coupon -->
+      <class name="test_cases.TC007_PDF">
+        <methods>
+          <include name="CloseBrowser"/>
+          <include name="StartBrowser"/>
+          <include name="printAsPDF"/>
+        </methods>
+      </class> <!-- test_cases.TC007_PDF -->
+      <class name="test_cases.TC003_Check_quantity">
+        <methods>
+          <include name="checkQuantity"/>
+          <include name="CloseBrowser"/>
+          <include name="StartBrowser"/>
+        </methods>
+      </class> <!-- test_cases.TC003_Check_quantity -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

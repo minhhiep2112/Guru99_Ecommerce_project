@@ -1,7 +1,6 @@
 package test_cases;
 
 import static org.testng.Assert.assertEquals;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -22,7 +21,7 @@ public class TC009_Discount_Coupon extends InitialDriver {
 		assertEquals(price.getText(), "$475.00");
 //		assertEquals(price.getText(), "$500.00");
 		
-		
+			
 	}
 	
 	
